@@ -1,0 +1,64 @@
+:root { --biru: #0b5fa5; --biru-tua: #083d68; --oranye: #e07a1f; --tinta: #1d2b36; --abu: #5a6b78; --garis: #c8d3da; --latar: #f2f6f8; --kartu: #ffffff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; color: var(--tinta); background: var(--latar); line-height: 1.55; }
+header.top { background: var(--biru-tua); color: #fff; padding: 18px 20px 0; }
+.brand { display: flex; gap: 14px; align-items: center; max-width: 1080px; margin: 0 auto; }
+.logo { width: 52px; height: 52px; border-radius: 10px; background: var(--oranye); color: #fff; font-size: 28px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.brandname { margin: 0; font-size: 24px; font-weight: 700; line-height: 1.2; }
+.brand h1 { margin: 0; font-size: 24px; line-height: 1.2; }
+.brand p { margin: 2px 0 0; color: #cfe2ef; font-size: 14px; }
+.yearbox { margin-left: auto; text-align: right; font-size: 14px; }
+.yearbox select { font-size: 16px; padding: 6px 10px; border-radius: 6px; border: 1px solid #fff; background: #fff; color: var(--tinta); }
+nav { max-width: 1080px; margin: 14px auto 0; display: flex; flex-wrap: wrap; gap: 2px; }
+nav a { color: #d7e7f2; text-decoration: none; padding: 9px 13px; border-radius: 8px 8px 0 0; font-size: 15px; }
+nav a:hover { background: #0e4c7c; color: #fff; }
+nav a.active { background: var(--latar); color: var(--biru-tua); font-weight: 700; }
+main { max-width: 1080px; margin: 0 auto; padding: 22px 20px 40px; }
+h1 { font-size: 30px; margin: 4px 0 8px; color: var(--biru-tua); }
+.lead { font-size: 18px; color: var(--abu); margin: 0 0 20px; }
+h2 { font-size: 20px; margin: 0 0 6px; color: var(--biru-tua); }
+.sub { color: var(--abu); margin: 0 0 10px; font-size: 14px; }
+.card { background: var(--kartu); border: 1px solid var(--garis); border-radius: 12px; padding: 20px; margin-bottom: 18px; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+.kpi { background: var(--kartu); border: 1px solid var(--garis); border-top: 5px solid var(--biru); border-radius: 12px; padding: 16px; }
+.kpi-label { margin: 0; color: var(--abu); font-size: 14px; }
+.kpi-value { margin: 4px 0; font-size: 30px; font-weight: 800; color: var(--biru-tua); }
+.kpi-value span { font-size: 15px; font-weight: 600; color: var(--abu); }
+.kpi-note { margin: 0; font-size: 13px; color: var(--abu); }
+.chart { width: 100%; height: auto; display: block; }
+.facts { margin: 0; padding-left: 20px; }
+.facts li { margin-bottom: 8px; }
+.src { color: var(--abu); font-size: 13px; margin: 12px 0 0; }
+.hint { color: var(--abu); font-size: 13px; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 15px; }
+.tbl th, .tbl td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--garis); }
+.tbl th { background: #e8f0f5; color: var(--biru-tua); }
+.tbl th[data-sort] { cursor: pointer; }
+.tbl th[data-sort]:hover { background: #d3e2ec; }
+.tbl tr[data-prov] { cursor: pointer; }
+.tbl tr[data-prov]:hover td { background: #fff4e6; }
+.tablewrap { overflow-x: auto; }
+.bar { background: #e8eef2; border-radius: 4px; height: 12px; min-width: 80px; }
+.bar span { display: block; height: 12px; border-radius: 4px; background: var(--biru); }
+.toggle, .tabs { display: flex; gap: 8px; margin-top: 14px; }
+.toggle button, .tabs button { padding: 8px 16px; border: 1px solid var(--biru); background: #fff; color: var(--biru); border-radius: 20px; cursor: pointer; font-size: 15px; }
+.toggle button.on, .tabs button.on { background: var(--biru); color: #fff; }
+.btn { display: inline-block; background: var(--biru); color: #fff; text-decoration: none; padding: 9px 16px; border-radius: 8px; margin: 3px 4px 3px 0; }
+.btn:hover { background: var(--biru-tua); }
+.filter { display: block; margin-bottom: 12px; font-weight: 600; }
+.filter select, .filter input { font-size: 16px; padding: 7px 10px; border: 1px solid var(--garis); border-radius: 6px; margin-left: 6px; }
+footer { background: var(--biru-tua); color: #cfe2ef; padding: 20px; font-size: 14px; }
+footer .inner { max-width: 1080px; margin: 0 auto; }
+@media (max-width: 700px) {
+  .brand { flex-wrap: wrap; }
+  .brand h1 { font-size: 20px; }
+  .yearbox { margin-left: 0; text-align: left; }
+  .kpis { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 24px; }
+  .lead { font-size: 16px; }
+  nav a { padding: 8px 9px; font-size: 14px; }
+  main { padding: 16px 12px 30px; }
+  .card { padding: 14px; }
+  .kpi-value { font-size: 24px; }
+}
+@media (max-width: 420px) { .kpis { grid-template-columns: 1fr; } }

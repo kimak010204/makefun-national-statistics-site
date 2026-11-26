@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistik Arunika — Kantor Statistik Arunika</title>
+<meta name="description" content="Situs statistik nasional Arunika: penduduk, ekonomi, pekerjaan, harga, dan wilayah, 2020–2025.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">A</div>
+    <div>
+      <p class="brandname">Kantor Statistik Arunika</p>
+      <p>Data resmi negara Arunika — akurat, terbuka, untuk semua.</p>
+    </div>
+    <div class="yearbox">
+      <label for="year-select">Tahun data</label><br>
+      <select id="year-select" aria-label="Pilih tahun data"></select>
+    </div>
+  </div>
+  <nav aria-label="Navigasi utama">
+    <a href="#/">Beranda</a>
+    <a href="#/penduduk">Penduduk</a>
+    <a href="#/ekonomi">Ekonomi</a>
+    <a href="#/kerja">Ketenagakerjaan</a>
+    <a href="#/harga">Harga &amp; Inflasi</a>
+    <a href="#/wilayah">Wilayah</a>
+    <a href="#/data">Data &amp; Tabel</a>
+    <a href="#/metode">Metodologi</a>
+  </nav>
+</header>
+<main id="view" aria-live="polite"></main>
+<footer>
+  <div class="inner">
+    <strong>Kantor Statistik Arunika</strong> — Seluruh angka di situs ini berasal dari
+    Kantor Statistik Arunika dan konsisten antar halaman. Rilis terbaru: November 2025.
+    Situs ini berjalan luring dari berkasnya sendiri.
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="views.js"></script>
+<script src="router.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
